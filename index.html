@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Polygon Filtering and  Display Polygon Data on Hover</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="filters">
+    <svg id="map" width="500" height="300"></svg>
+
+    <h3>Status</h3>
+    <label><input type="checkbox" class="status-filter" value="Commercial" checked /> Commercial</label>
+    <label><input type="checkbox" class="status-filter" value="Administrative" checked /> Administrative</label>
+    <label><input type="checkbox" class="status-filter" value="Clinical" checked /> Clinical</label>
+
+    <div class="price-filter">
+      <span>Area :</span>
+      <h3 id="area-value"></h3>
+    </div>
+    <input type="range" id="area-filter" min="0" max="300" value="300" />
+
+    <div class="price-filter">
+      <span>Price : </span>
+      <h3 id="price-value"></h3>
+    </div>
+    <input type="range" id="price-filter" min="0" max="30.00" step="1" value="30.00" />
+  </div>
+
+  <div id="product-info" class="product-info hidden">
+    <button id="close-info" class="close-btn">✖</button>
+    <h3> Unit Info</h3>
+    <p id="unit-status"></p>
+    <p id="unit-area"></p>
+    <p id="unit-price"></p>
+    <button id="info-button">callback</button>
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
