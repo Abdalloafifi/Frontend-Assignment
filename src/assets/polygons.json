@@ -1,0 +1,20 @@
+[
+  {
+    "id": "poly1",
+    "status": "Commercial",
+    "area": 120,
+    "price": 15
+  },
+  {
+    "id": "poly2",
+    "status": "Clinical",
+    "area": 180,
+    "price": 22
+  },
+  {
+    "id": "poly3",
+    "status": "Administrative",
+    "area": 90,
+    "price": 8
+  }
+]

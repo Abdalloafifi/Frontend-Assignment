@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+.filters {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  margin: 0 auto;
+}
+
+.filters h3 {
+  margin: 10px 0 5px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filters input[type="range"] {
+  width: 100%;
+}
+
+.price-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unit rect {
+  fill: #ddd;
+  stroke: #333;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+.unit text {
+  font-size: 14px;
+  text-anchor: middle;
+  fill: #333;
+  pointer-events: none;
+}
+
+.unit[data-status="Commercial"] rect { fill: #00cc66; }
+.unit[data-status="Administrative"] rect { fill: #ff9900; }
+.unit[data-status="Clinical"] rect { fill: #3399ff; }
+
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  display: none;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.product-info {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  max-width: 90%;
+  z-index: 999;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.product-info.hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  pointer-events: none;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+#product-info h3 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#product-info p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+#info-button {
+  margin-top: 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#info-button:hover {
+  background-color: #0056b3;
+}
